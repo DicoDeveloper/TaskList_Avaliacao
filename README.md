@@ -9,6 +9,7 @@ Back-end:
   Entity Framework Code-First;
   Base de dados SQL-Server;
   Padrões IoC e DDD na arquitetura;
+  AutoFac;
   
 Front-end:
 
