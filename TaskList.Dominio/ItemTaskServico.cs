@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using TaskList.Modelo.Entidades;
 using TaskList.Modelo.Enumeradores;
 using TaskList.Modelo.Interfaces.Repositorios;
@@ -43,6 +45,24 @@ namespace TaskList.Dominio
         public bool Salvar(ItemTask task)
         {
             return _itemTaskRepositorio.Salvar(task);
+        }
+
+        public bool Salvar(List<ItemTask> tasks)
+        {
+            foreach (ItemTask item in tasks)
+            {
+                _itemTaskRepositorio.Salvar(item);
+            }
+
+            IEnumerable<long> ids = tasks.Select(t => t.Id);
+
+            foreach (ItemTask item in Obter().Where(t => !ids.Contains(t.Id)).ToList())
+            {
+                item.Status = StatusTask.Cancelado;
+                _itemTaskRepositorio.Salvar(item);
+            }
+
+            return true;
         }
 
         public bool Concluir(long id)

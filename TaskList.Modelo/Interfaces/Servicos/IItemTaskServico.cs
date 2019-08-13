@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using TaskList.Modelo.Entidades;
 
 namespace TaskList.Modelo.Interfaces.Servicos
@@ -11,6 +12,7 @@ namespace TaskList.Modelo.Interfaces.Servicos
         IQueryable<ItemTask> ObterConcluidos();
         IQueryable<ItemTask> ObterCancelados();
         bool Salvar(ItemTask task);
+        bool Salvar(List<ItemTask> tasks);
         bool Concluir(long id);
         bool Cancelar(long id);
     }

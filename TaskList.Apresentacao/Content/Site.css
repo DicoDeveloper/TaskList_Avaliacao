@@ -31,13 +31,28 @@ body {
 .progress {
     margin-top: -25px !important;
     margin-left: -25.51px !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 15px !important;
     position: relative !important;
     height: 10px !important;
-    display: block !important;
     width: unset;
     background-color: #acece6 !important;
     overflow: hidden !important;
     border-top-left-radius: 5px !important;
     border-top-right-radius: 5px !important;
+}
+
+#btn_add {
+    float: right;
+    margin-top: -65px;
+}
+
+.task{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+.remove-task {
+    margin-left: 5px;
+    margin-top: -6px;
 }

@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskList.InversorDependenci
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskList.Dominio", "TaskList.Dominio\TaskList.Dominio.csproj", "{0CB4E119-D268-4951-AC08-60985527D1A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskList.Apresentacao", "..\TaskList.Apresentacao\TaskList.Apresentacao.csproj", "{7003923C-5116-43FA-8E47-2600A82BAA66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskList.Apresentacao", "TaskList.Apresentacao\TaskList.Apresentacao.csproj", "{7003923C-5116-43FA-8E47-2600A82BAA66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
