@@ -52,7 +52,7 @@ body {
     margin-bottom: 15px !important;
 }
 
-.remove-task {
+.remove-task, .editar-task {
     margin-left: 5px;
     margin-top: -6px;
 }

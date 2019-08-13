@@ -15,6 +15,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="task" type="text" class="validate">
+                        <input id="id_task" type="hidden">
                         <label class="active" for="task">Task</label>
                         <span class="helper-text" data-error="Obrigatório" data-success=""></span>
                         <a class="btn-floating btn-small waves-effect waves-light tooltipped" id="btn_add" data-position="left" data-tooltip="Adicionar task">
@@ -30,13 +31,16 @@
                                 <label>
                                     <input type="checkbox" @(task.Status == TaskList.Modelo.Enumeradores.StatusTask.Concluido ? "checked" : "") />
                                     <span>@task.Titulo</span>
-                                    <a class="btn-floating btn-small waves-effect waves-light red tooltipped remove-task right" data-position="left" data-tooltip="Cancelar task">
-                                        <i class="material-icons">remove</i>
-                                    </a>
-                                    <input type="hidden" name="Task[@Model.ToList().IndexOf(task)].Titulo" value="@task.Titulo" />
-                                    <input type="hidden" name="Task[@Model.ToList().IndexOf(task)].Id" value="@task.Id" />
-                                    <input type="hidden" data-status name="Task[@Model.ToList().IndexOf(task)].Status" value="@task.Status" />
                                 </label>
+                                <a class="btn-floating btn-small waves-effect waves-light red tooltipped remove-task right" data-position="left" data-tooltip="Cancelar task">
+                                    <i class="material-icons">remove</i>
+                                </a>
+                                <a class="btn-floating btn-small waves-effect waves-light cyan darken-1 tooltipped editar-task right" data-position="left" data-tooltip="Editar task">
+                                    <i class="material-icons">edit</i>
+                                </a>
+                                <input type="hidden" name="Task[@Model.ToList().IndexOf(task)].Titulo" value="@task.Titulo" />
+                                <input type="hidden" class="id-task" name="Task[@Model.ToList().IndexOf(task)].Id" value="@task.Id" />
+                                <input type="hidden" data-status name="Task[@Model.ToList().IndexOf(task)].Status" value="@task.Status" />
                             </div>
                         </div>
                     }
