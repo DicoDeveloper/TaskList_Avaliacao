@@ -1,0 +1,43 @@
+﻿html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body, .container-fluid, .body-content {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+    background-size: 200%;
+    background-position: right !important;
+}
+
+.panel-body {
+    padding: 25px;
+}
+
+#formulario {
+    margin-top: 10%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#btns{
+    margin-bottom: -20px;
+}
+
+.progress {
+    margin-top: -25px !important;
+    margin-left: -25.51px !important;
+    margin-bottom: 30px !important;
+    position: relative !important;
+    height: 10px !important;
+    display: block !important;
+    width: unset;
+    background-color: #acece6 !important;
+    overflow: hidden !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+}
